@@ -18,9 +18,10 @@ export function App(): ReactElement {
       <RookSyncGate
         environment="sandbox"
         clientUUID="56d4ae03-5bbb-4a1a-972b-e79d6302cf03"
-        password="AFhHtKITlIk7UdQrmgWygVz9zUNSOdmQ9xFH">
+        password="AFhHtKITlIk7UdQrmgWygVz9zUNSOdmQ9xFH"
+        enableLogs>
         <Providers.Rook>
-          <Screens.Main />
+          <Screens.Sync />
         </Providers.Rook>
       </RookSyncGate>
     </SafeAreaView>

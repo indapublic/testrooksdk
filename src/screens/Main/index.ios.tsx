@@ -1,9 +1,10 @@
 import { ReactElement, useCallback, useState } from "react";
-import { Button, ScrollView, Text, View } from "react-native";
+import { Button, SectionList, Text, View } from "react-native";
 import {
   useRookAppleHealthVariables,
   useRookConfiguration,
 } from "react-native-rook-sdk";
+import { session } from "../../helpers/session";
 import styles from "./styles";
 
 export function Main(): ReactElement {
@@ -25,7 +26,7 @@ export function Main(): ReactElement {
   const doPress = useCallback(async (): Promise<void> => {
     try {
       toggleSubmitting(true);
-      await updateUserID("foo");
+      await updateUserID(session.userUuid);
       await enableBackGroundForCalories();
       await enableBackGroundForSteps();
       try {
@@ -46,13 +47,29 @@ export function Main(): ReactElement {
   }, [readyRookConfiguration, readyRookAppleHealthVariables]);
 
   return (
-    <View style={styles.containerDefault}>
-      <ScrollView horizontal={false} showsVerticalScrollIndicator={false}>
-        <Text style={styles.headerDefault}>Today Steps</Text>
-        <Text style={styles.textDefault}>{todaySteps}</Text>
-        <Text style={styles.headerDefault}>Today Active Calories Burned</Text>
-        <Text style={styles.textDefault}>{todayActiveCaloriesBurned}</Text>
-      </ScrollView>
+    <>
+      <SectionList
+        horizontal={false}
+        keyExtractor={(item, index) => `${item}${index}`}
+        renderItem={({ item }) => (
+          <View style={styles.itemDefault}>
+            <Text style={styles.itemTextDefault}>{item}</Text>
+          </View>
+        )}
+        renderSectionHeader={({ section: { title } }) => (
+          <Text style={styles.headerDefault}>{title}</Text>
+        )}
+        sections={[
+          { title: "Your User Id", data: [session.userUuid] },
+          { title: "Today Steps", data: [todaySteps] },
+          {
+            title: "Today Active Calories Burned",
+            data: [todayActiveCaloriesBurned],
+          },
+        ]}
+        showsVerticalScrollIndicator={false}
+        style={styles.sectionDefault}
+      />
       <Button
         disabled={
           !readyRookConfiguration ||
@@ -62,6 +79,6 @@ export function Main(): ReactElement {
         title={submitting ? "Wait..." : "Get steps count for iOS!"}
         onPress={doPress}
       />
-    </View>
+    </>
   );
 }

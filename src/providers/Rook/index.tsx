@@ -32,7 +32,6 @@ export function Provider(
     }
 
     const availability = await checkAvailability();
-    console.debug(`availability = ${availability}`);
     setAvailability(availability);
 
     if ("INSTALLED" !== availability) {
@@ -73,8 +72,6 @@ export function Provider(
     }),
     [availability, granted, requestPermissions],
   );
-
-  console.log(`granted = ${granted}`);
 
   return (
     <RookContext.Provider value={memoizedValue}>

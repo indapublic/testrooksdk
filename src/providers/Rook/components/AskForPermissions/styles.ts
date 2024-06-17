@@ -21,4 +21,10 @@ export default StyleSheet.create({
   extraContainer: {
     marginTop: 50,
   },
+  buttonsContainerDefault: {
+    flexDirection: "column",
+  },
+  buttonsDividerDefault: {
+    height: 10,
+  },
 });
