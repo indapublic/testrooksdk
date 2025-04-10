@@ -8,7 +8,6 @@
 import React, { ReactElement } from "react";
 import { SafeAreaView, StatusBar } from "react-native";
 import { RookSyncGate } from "react-native-rook-sdk";
-import { Providers } from "./src/providers";
 import { Screens } from "./src/screens";
 
 export function App(): ReactElement {
@@ -16,13 +15,13 @@ export function App(): ReactElement {
     <SafeAreaView style={{ flex: 1 }}>
       <StatusBar backgroundColor="#ffffff" barStyle="light-content" />
       <RookSyncGate
+        enableBackgroundSync
+        enableEventsBackgroundSync
+        clientUUID="88e4e31c-2a2a-4b8b-adda-112142651364"
+        enableLogs
         environment="sandbox"
-        clientUUID="56d4ae03-5bbb-4a1a-972b-e79d6302cf03"
-        password="AFhHtKITlIk7UdQrmgWygVz9zUNSOdmQ9xFH"
-        enableLogs>
-        <Providers.Rook>
-          <Screens.Sync />
-        </Providers.Rook>
+        password="8oi5C47Q1GvjztMKZT5wbTSggO46rbdHlUS7">
+        <Screens.Welcome />
       </RookSyncGate>
     </SafeAreaView>
   );

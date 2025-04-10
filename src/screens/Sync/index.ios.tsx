@@ -15,8 +15,6 @@ export function Sync(): ReactElement {
   const [submitting, toggleSubmitting] = useState(false);
   const {
     ready: readyRookSummaries,
-    shouldSyncFor,
-    syncSummaries,
     reSyncFailedSummaries,
     syncSleepSummary,
     syncPhysicalSummary,
@@ -74,40 +72,6 @@ export function Sync(): ReactElement {
       { title: "Background sync enabled", data: [syncing ? "Yes" : "No"] },
     ];
 
-    data.push({
-      title: "shouldSyncForBody",
-      data: [
-        (await shouldSyncFor({
-          type: "BODY",
-          date: syncDate,
-        }))
-          ? "Yes"
-          : "No",
-      ],
-    });
-    data.push({
-      title: "shouldSyncForPhysical",
-      data: [
-        (await shouldSyncFor({
-          type: "PHYSICAL",
-          date: syncDate,
-        }))
-          ? "Yes"
-          : "No",
-      ],
-    });
-    data.push({
-      title: "shouldSyncForSleep",
-      data: [
-        (await shouldSyncFor({
-          type: "SLEEP",
-          date: syncDate,
-        }))
-          ? "Yes"
-          : "No",
-      ],
-    });
-
     try {
       toggleSubmitting(true);
 
@@ -136,8 +100,6 @@ export function Sync(): ReactElement {
     }
   }, [
     readyRookSummaries,
-    shouldSyncFor,
-    syncSummaries,
     reSyncFailedSummaries,
     syncSleepSummary,
     syncPhysicalSummary,

@@ -7,9 +7,9 @@ PODS:
   - hermes-engine (0.74.2):
     - hermes-engine/Pre-built (= 0.74.2)
   - hermes-engine/Pre-built (0.74.2)
-  - MMKV (1.3.5):
-    - MMKVCore (~> 1.3.5)
-  - MMKVCore (1.3.5)
+  - MMKV (2.1.0):
+    - MMKVCore (~> 2.1.0)
+  - MMKVCore (2.1.1)
   - RCT-Folly (2024.01.01.00):
     - boost
     - DoubleConversion
@@ -960,7 +960,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-rook-sdk (0.3.3):
+  - react-native-rook-sdk (1.1.3):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -980,7 +980,7 @@ PODS:
     - React-utils
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
-    - RookSDK (= 1.4.7)
+    - RookSDK (= 1.6.10)
     - Yoga
   - React-nativeconfig (0.74.2)
   - React-NativeModulesApple (0.74.2):
@@ -1211,13 +1211,7 @@ PODS:
     - React-logger (= 0.74.2)
     - React-perflogger (= 0.74.2)
     - React-utils (= 0.74.2)
-  - RookAppleHealth (1.6.2)
-  - RookConnectTransmission (1.3.3)
-  - RookSDK (1.4.7):
-    - RookAppleHealth (= 1.6.2)
-    - RookConnectTransmission (= 1.3.3)
-    - RookUsersSDK (= 1.1.1)
-  - RookUsersSDK (1.1.1)
+  - RookSDK (1.6.10)
   - SocketRocket (0.7.0)
   - Yoga (0.0.0)
 
@@ -1285,10 +1279,7 @@ SPEC REPOS:
   trunk:
     - MMKV
     - MMKVCore
-    - RookAppleHealth
-    - RookConnectTransmission
     - RookSDK
-    - RookUsersSDK
     - SocketRocket
 
 EXTERNAL SOURCES:
@@ -1413,8 +1404,8 @@ SPEC CHECKSUMS:
   fmt: 4c2741a687cc09f0634a2e2c72a838b99f1ff120
   glog: fdfdfe5479092de0c4bdbebedd9056951f092c4f
   hermes-engine: 01d3e052018c2a13937aca1860fbedbccd4a41b7
-  MMKV: 506311d0494023c2f7e0b62cc1f31b7370fa3cfb
-  MMKVCore: 9e2e5fd529b64a9fe15f1a7afb3d73b2e27b4db9
+  MMKV: ce484c1ac40bf76d5f09a0195d2ec5b3d3840d55
+  MMKVCore: 1eb661c6c498ab88e3df9ce5d8ff94d05fcc0567
   RCT-Folly: 02617c592a293bd6d418e0a88ff4ee1f88329b47
   RCTDeprecation: b03c35057846b685b3ccadc9bfe43e349989cdb2
   RCTRequired: 194626909cfa8d39ca6663138c417bc6c431648c
@@ -1440,7 +1431,7 @@ SPEC CHECKSUMS:
   React-logger: 29fa3e048f5f67fe396bc08af7606426d9bd7b5d
   React-Mapbuffer: bf56147c9775491e53122a94c423ac201417e326
   react-native-mmkv: 8c9a677e64a1ac89b0c6cf240feea528318b3074
-  react-native-rook-sdk: 246976257a469b080baa3b479bc4c3bb54ca7997
+  react-native-rook-sdk: b65f98c9d71a838b34a8c0c789d4feb0149df1af
   React-nativeconfig: 9f223cd321823afdecf59ed00861ab2d69ee0fc1
   React-NativeModulesApple: ff7efaff7098639db5631236cfd91d60abff04c0
   React-perflogger: 32ed45d9cee02cf6639acae34251590dccd30994
@@ -1464,13 +1455,10 @@ SPEC CHECKSUMS:
   React-runtimescheduler: 56b642bf605ba5afa500d35790928fc1d51565ad
   React-utils: 4476b7fcbbd95cfd002f3e778616155241d86e31
   ReactCommon: ecad995f26e0d1e24061f60f4e5d74782f003f12
-  RookAppleHealth: f71cea45244a94daec8a1faeddfe2887d3c1e991
-  RookConnectTransmission: 2ab9eb19592a978db87316db9a57d47a704e5257
-  RookSDK: ca0467cff805df862d0ff1e8497baa20f30bdc83
-  RookUsersSDK: d16cba60f3527b9424be0c7713dc013d433fef6e
+  RookSDK: 0a6807d12f3b2434d3068354cb5b6ba37acf2cea
   SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d
-  Yoga: ae3c32c514802d30f687a04a6a35b348506d411f
+  Yoga: 2f71ecf38d934aecb366e686278102a51679c308
 
 PODFILE CHECKSUM: 9e371b1af11fe620d9333ca5ed5d129b634507be
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.14.3

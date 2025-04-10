@@ -13,9 +13,9 @@ export function Main(): ReactElement {
   const {
     ready: readyRookAppleHealthVariables,
     getTodaySteps,
-    getTodayActiveCaloriesBurned,
-    enableBackGroundForSteps,
-    enableBackGroundForCalories,
+    // getTodayActiveCaloriesBurned,
+    // enableBackGroundForSteps,
+    // enableBackGroundForCalories,
   } = useRookAppleHealthVariables();
   const [submitting, toggleSubmitting] = useState(false);
   const [todaySteps, setTodaySteps] = useState<string | null>(null);
@@ -27,19 +27,12 @@ export function Main(): ReactElement {
     try {
       toggleSubmitting(true);
       await updateUserID(session.userUuid);
-      await enableBackGroundForCalories();
-      await enableBackGroundForSteps();
+      // await enableBackGroundForCalories();
+      // await enableBackGroundForSteps();
       try {
         setTodaySteps(String(await getTodaySteps()));
       } catch (err) {
         setTodaySteps(JSON.stringify(err));
-      }
-      try {
-        setTodayActiveCaloriesBurned(
-          String(await getTodayActiveCaloriesBurned()),
-        );
-      } catch (err) {
-        setTodayActiveCaloriesBurned(JSON.stringify(err));
       }
     } finally {
       toggleSubmitting(false);

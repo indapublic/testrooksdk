@@ -15,12 +15,12 @@ export function Main(): ReactElement {
     useRookDataSources();
   const {
     ready: readyRookAndroidBackgroundSteps,
-    startSteps,
-    stopSteps,
+    // startSteps,
+    // stopSteps,
     isStepsAvailable,
-    hasStepsPermissions,
-    isStepsActive,
-    getTodaySteps,
+    // hasStepsPermissions,
+    // isStepsActive,
+    // getTodaySteps,
   } = useRookAndroidBackgroundSteps();
   const [submitting, toggleSubmitting] = useState(false);
   const [isStepsAvailableState, setIsStepsAvailableState] = useState(false);
@@ -34,11 +34,11 @@ export function Main(): ReactElement {
       toggleSubmitting(true);
       await updateUserID(session.userUuid);
       try {
-        await startSteps();
+        // await startSteps();
         setIsStepsAvailableState(await isStepsAvailable());
-        setHasStepsPermissionsState(await hasStepsPermissions());
-        setIsStepsActiveState(await isStepsActive());
-        setTodaySteps(String(await getTodaySteps()));
+        // setHasStepsPermissionsState(await hasStepsPermissions());
+        // setIsStepsActiveState(await isStepsActive());
+        // setTodaySteps(String(await getTodaySteps()));
       } catch (err) {
         setTodaySteps(JSON.stringify(err));
       }
