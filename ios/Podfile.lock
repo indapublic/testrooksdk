@@ -960,7 +960,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-rook-sdk (1.1.3):
+  - react-native-rook-sdk (1.1.4):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -980,7 +980,7 @@ PODS:
     - React-utils
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
-    - RookSDK (= 1.6.10)
+    - RookSDK (= 1.7.2)
     - Yoga
   - React-nativeconfig (0.74.2)
   - React-NativeModulesApple (0.74.2):
@@ -1213,7 +1213,7 @@ PODS:
     - React-utils (= 0.74.2)
   - RNCAsyncStorage (2.1.2):
     - React-Core
-  - RookSDK (1.6.10)
+  - RookSDK (1.7.2)
   - SocketRocket (0.7.0)
   - Yoga (0.0.0)
 
@@ -1436,7 +1436,7 @@ SPEC CHECKSUMS:
   React-logger: 29fa3e048f5f67fe396bc08af7606426d9bd7b5d
   React-Mapbuffer: bf56147c9775491e53122a94c423ac201417e326
   react-native-mmkv: 8c9a677e64a1ac89b0c6cf240feea528318b3074
-  react-native-rook-sdk: b65f98c9d71a838b34a8c0c789d4feb0149df1af
+  react-native-rook-sdk: ef04ad8bd1a2e18814f98999ebf65b6d9f133510
   React-nativeconfig: 9f223cd321823afdecf59ed00861ab2d69ee0fc1
   React-NativeModulesApple: ff7efaff7098639db5631236cfd91d60abff04c0
   React-perflogger: 32ed45d9cee02cf6639acae34251590dccd30994
@@ -1461,7 +1461,7 @@ SPEC CHECKSUMS:
   React-utils: 4476b7fcbbd95cfd002f3e778616155241d86e31
   ReactCommon: ecad995f26e0d1e24061f60f4e5d74782f003f12
   RNCAsyncStorage: addfc2cb6511dbe199c56c6b26ede383b6c38919
-  RookSDK: 0a6807d12f3b2434d3068354cb5b6ba37acf2cea
+  RookSDK: b782b3fa8c4ca7cf9d433cd66c990628cab0779a
   SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d
   Yoga: 2f71ecf38d934aecb366e686278102a51679c308
 
