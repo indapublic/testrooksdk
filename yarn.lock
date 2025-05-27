@@ -7886,13 +7886,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-rook-sdk@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "react-native-rook-sdk@npm:1.2.1"
+"react-native-rook-sdk@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "react-native-rook-sdk@npm:1.2.2"
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: d9c3d45774c81a2a268ffebca026d19416c826ba902ec8b7c979c54278500e231c6acb7e51233ec542ea44da7b6469c62e963caaaa35486ce7b15ea459e4b46e
+  checksum: f0193ecaa3e177d17324d9512e94e9bd1376dcdd6891368582304c3d2c27b4bb3d624d973b5964751e28f42a66a196c5c5eaf780fc0f5a1064e25db53054be14
   languageName: node
   linkType: hard
 
@@ -9026,7 +9026,7 @@ __metadata:
     react-native-calendars: ^1.1305.0
     react-native-mmkv: ^2.12.2
     react-native-modal: ^13.0.1
-    react-native-rook-sdk: ^1.2.1
+    react-native-rook-sdk: ^1.2.2
     react-test-renderer: 18.3.1
     typescript: 5.0.4
   languageName: unknown
